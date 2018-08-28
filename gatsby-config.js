@@ -3,7 +3,15 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
-    'gatsby-mdx',
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          pages: require.resolve('./src/components/layout.js'),
+          default: require.resolve('./src/components/layout.js'),
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -18,5 +26,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
   ],
 }
