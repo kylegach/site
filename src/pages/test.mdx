@@ -1,12 +1,25 @@
 import { Box, Flex } from 'rebass'
+import MDX from '@mdx-js/runtime'
 
 # h1
 
-Some text with a [link](https://kylegach.com) in it.
+Some text to make a paragraph.
+
+## h2
+
+Some text to make a paragraph.
+
+### h3
+
+Some _text_ with a [link](https://kylegach.com) in it.
 
 A [relative link](/).
 
 <Flex>
-  <Box bg="blue" color="white" p={3} width={1/3}>A</Box>
+  <Box bg="blue" color="white" p={3} width={1/3}>
+    <MDX>
+      Does _markdown_ work here? Yes, but no custom components.
+    </MDX>
+  </Box>
   <Box bg="red" color="white" p={3} width={2/3}>B</Box>
 </Flex>
