@@ -10,6 +10,7 @@ import './layout.css'
 
 const components = {
   a: props => <Link is="a" {...props} />,
+  em: props => <em style={{ textDecoration: 'underline' }} {...props} />,
   h1: props => <Heading is="h1" fontSize={7} mb={3} mt={5} {...props} />,
   h2: props => <Heading is="h2" fontSize={5} mb={3} mt={4} {...props} />,
   h3: props => <Heading is="h3" fontSize={3} mb={3} mt={3} {...props} />,
