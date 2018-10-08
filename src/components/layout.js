@@ -8,9 +8,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 
+// TODO: Upgrade to Rebass V4. Or system-components? styled-system?
 const components = {
+  // TODO: This does not use Gatsby's Link
   a: props => <Link is="a" {...props} />,
-  em: props => <em style={{ textDecoration: 'underline' }} {...props} />,
+  em: props => <em style={{ textDecoration: 'underline' }} {...props} />, // TODO: Only here to test custom components
   h1: props => <Heading is="h1" fontSize={7} mb={3} mt={5} {...props} />,
   h2: props => <Heading is="h2" fontSize={5} mb={3} mt={4} {...props} />,
   h3: props => <Heading is="h3" fontSize={3} mb={3} mt={3} {...props} />,
